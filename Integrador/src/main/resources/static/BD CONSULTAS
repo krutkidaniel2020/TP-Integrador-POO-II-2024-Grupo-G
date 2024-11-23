@@ -1,0 +1,5 @@
+
+data access object
+
+INSERT INTO `cliente` VALUES (1,'255225','apell1','nom1','2024-11-23T18:27:04.692+00:00','Lote 1','111@mail.com','375811111')
+INSERT INTO `cliente` VALUES (2,'2222','apell2','nom2','2024-11-23T18:27:04.692+00:00','Lote 2','222@mail.com','3758222')
