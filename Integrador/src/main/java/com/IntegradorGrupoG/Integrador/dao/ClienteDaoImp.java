@@ -16,9 +16,9 @@ public class ClienteDaoImp implements ClienteDao{
 
     @Override
     public List<Cliente> getClientes() {
-        String query = "FROM Cliente"; //Va el nombre de la Clase y no de la tabla aunque sean iguales
+        String query = "FROM Cliente"; //Va el nombre de la Clase y no de la tabla bd aunque sean iguales
        //return entityManager.createNamedQuery(query).getResultList();
-        return entityManager.createNamedQuery(query).getResultList();
+        return entityManager.createQuery(query).getResultList();
 
     }
 }

@@ -27,7 +27,7 @@ public class ClienteController  {
         unCliente.setNombre("Nom");
         unCliente.setDireccion("Ruta 1");
         unCliente.setEmail("Correo@asdasd.com");
-        unCliente.setFechaNac(new Date());
+        unCliente.setFechaNac("11/11/2024");
         unCliente.setTel(375845454);
 
 
@@ -48,7 +48,7 @@ public class ClienteController  {
         unCliente.setNombre("Nom");
         unCliente.setDireccion("Ruta 1");
         unCliente.setEmail("Correo@asdasd.com");
-        unCliente.setFechaNac(new Date());
+        unCliente.setFechaNac("11/11/2024");
         unCliente.setTel(375845454);
 
 
@@ -64,7 +64,7 @@ public class ClienteController  {
         unCliente.setNombre("Nom");
         unCliente.setDireccion("Ruta 1");
         unCliente.setEmail("Correo@asdasd.com");
-        unCliente.setFechaNac(new Date());
+        unCliente.setFechaNac("11/11/2024");
         unCliente.setTel(375845454);
 
 
@@ -80,7 +80,7 @@ public class ClienteController  {
         unCliente.setNombre("Nom");
         unCliente.setDireccion("Ruta 1");
         unCliente.setEmail("Correo@asdasd.com");
-        unCliente.setFechaNac(new Date());
+        unCliente.setFechaNac("11/11/2024");
         unCliente.setTel(375845454);
 
 

@@ -11,24 +11,32 @@ import java.util.Objects;
 //import javax.persistence.Table;
 
 @Entity
-@Table(name = "Cliente") //referencia a la tabla en mysql en este caso
+@Table(name = "cliente") //referencia a la tabla en mysql en este caso
 
 public class Cliente {
-    @Column(name = "idCliente")
+
     @Id
+    @Column(name = "idCliente")
     private int idCliente;
+
     @Column(name = "dni")
     private String dni;
+
     @Column(name = "apellido")
     private String apellido;
+
     @Column(name = "nombre")
     private String nombre;
+
     @Column(name = "fechaNac")
-    private Date fechaNac;
+    private String fechaNac;
+
     @Column(name = "direccion")
     private String direccion;
+
     @Column(name = "email")
     private String email;
+
     @Column(name = "tel")
     private int tel;
 
@@ -64,11 +72,11 @@ public class Cliente {
         this.nombre = nombre;
     }
 
-    public Date getFechaNac() {
+    public String getFechaNac() {
         return fechaNac;
     }
 
-    public void setFechaNac(Date fechaNac) {
+    public void setFechaNac(String fechaNac) {
         this.fechaNac = fechaNac;
     }
 
