@@ -16,7 +16,7 @@ public class ProductoController {
     @Autowired
     private ProductoDao unDao; //inyeccion de dependencias
 
-    @RequestMapping(value = "productos")
+    @RequestMapping(value = "api/productos")
     public List<Producto> getProductos(){
         return unDao.getProductos();
 

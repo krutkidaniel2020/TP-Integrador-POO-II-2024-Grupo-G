@@ -23,4 +23,16 @@ public class ClienteDaoImp implements ClienteDao{
         List<Cliente> unaL = entityManager1.createQuery(query).getResultList();
         return unaL;
     }
+
+    @Override
+    public void elimunarCliente(int id) {
+        Cliente unCliente = entityManager1.find(Cliente.class,id);
+        entityManager1.remove(unCliente);
+    }
+
+    @Override
+    public void agregarCliente(Cliente cliente) {
+       entityManager1.merge(cliente);
+    }
+
 }

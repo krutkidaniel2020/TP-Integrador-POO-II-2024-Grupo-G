@@ -1,10 +1,11 @@
 $(document).ready(function() {
 cargarProductos();
+//window.location.href="http://localhost:8080/TEMPLATEVIEJO";
 });
 
 async function cargarProductos(){
 
-  const request = await fetch('productos', {
+  const request = await fetch('api/productos', {
     method: 'GET',
     headers: {
       'Accept': 'application/json',

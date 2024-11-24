@@ -11,7 +11,7 @@ import java.util.Objects;
 @Table(name = "cliente") //referencia a la tabla en mysql en este caso
 public class Cliente {
 
-    //@GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "id")
     private int id;

@@ -14,7 +14,7 @@ public class CategoriaController {
     @Autowired
     private CategoriaDao unDao; //inyeccion de dependencias
 
-    @RequestMapping(value = "categorias")
+    @RequestMapping(value = "api/categorias")
     public List<Categoria> getCategorias(){
         return unDao.getCategorias();
 

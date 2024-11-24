@@ -9,4 +9,7 @@ public interface ClienteDao {
 List<Cliente> getClientes();
 
 
+    void elimunarCliente(int id);
+
+    void agregarCliente(Cliente cliente);
 }
