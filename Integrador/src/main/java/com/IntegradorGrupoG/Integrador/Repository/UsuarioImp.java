@@ -11,7 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 @Repository
 @Transactional
-public class UsuarioDaoImp implements UsuarioServicio {
+public class UsuarioImp implements UsuarioServicio {
 
     @PersistenceContext
     EntityManager entityManager3;

@@ -4,7 +4,10 @@ $(document).ready(function() {
 });
 
 async function agregarCliente(){
-alert("Entro cliente");
+if(document.getElementById('pass').value!= document.getElementById('pass1').value){
+//alert('Contraseñas distintas!');
+return;
+}
 let datos ={};
 datos.dni = document.getElementById('dni').value;
 datos.apellido = document.getElementById('apellido').value;
@@ -23,23 +26,23 @@ datos.tel = document.getElementById('tel').value;
     body: JSON.stringify(datos)
   });
 
-  const clientes = await request.json();
+ // const clientes = await request.json();
 
 
 
 
 }
 async function agregarUsuario(){
-alert("Entro Usuario");
+
 let datosUser ={};
 datosUser.dni = document.getElementById('dni').value;
 datosUser.pass = document.getElementById('pass').value;
 datosUser.categoria = 'Cliente';
-//let repPas = document.getElementById('pass1').value;
-//if(repPas!= datosUser.pass){
-//alert('Contraseñas distintas!');
-//return;
-//}
+let repPas = document.getElementById('pass1').value;
+if(repPas!= datosUser.pass){
+alert('Contraseñas distintas!');
+return;
+}
 
     const request1 = await fetch('api/usuarios', {
       method: 'POST',
@@ -49,8 +52,9 @@ datosUser.categoria = 'Cliente';
       },
       body: JSON.stringify(datosUser)
     });
-    const usuarios = await request1.json();
-//location.reload();
+    //const usuarios = await request1.json();
+    alert(1);
+    window.location.href = 'index.html';
 
 }
 

@@ -1,10 +1,10 @@
-package com.IntegradorGrupoG.Integrador.Repository;
+package com.IntegradorGrupoG.Integrador.Services;
 
 import com.IntegradorGrupoG.Integrador.models.Cliente;
 
 import java.util.List;
 
-public interface ClienteDao {
+public interface ClienteServicio {
 
 List<Cliente> getClientes();
 

@@ -1,13 +1,11 @@
 package com.IntegradorGrupoG.Integrador.models;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "producto") //referencia a la tabla en mysql en este caso
 public class Producto {
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "id")
     int id;

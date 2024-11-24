@@ -1,5 +1,6 @@
 package com.IntegradorGrupoG.Integrador.Repository;
 
+import com.IntegradorGrupoG.Integrador.Services.CategoriaServicio;
 import com.IntegradorGrupoG.Integrador.models.Categoria;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
@@ -10,7 +11,7 @@ import java.util.List;
 
 @Repository
 @Transactional
-public class CategoriaDaoImp implements CategoriaDao{
+public class CategoriaImp implements CategoriaServicio {
 
     @PersistenceContext
     EntityManager entityManager1;

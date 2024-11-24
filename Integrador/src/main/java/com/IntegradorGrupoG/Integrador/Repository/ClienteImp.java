@@ -1,5 +1,6 @@
 package com.IntegradorGrupoG.Integrador.Repository;
 
+import com.IntegradorGrupoG.Integrador.Services.ClienteServicio;
 import com.IntegradorGrupoG.Integrador.models.Cliente;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
@@ -9,7 +10,7 @@ import java.util.List;
 
 @Repository
 @Transactional
-public class ClienteDaoImp implements ClienteDao{
+public class ClienteImp implements ClienteServicio {
 
     @PersistenceContext
      EntityManager entityManager1;

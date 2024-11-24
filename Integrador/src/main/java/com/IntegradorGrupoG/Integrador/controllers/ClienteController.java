@@ -1,12 +1,10 @@
 package com.IntegradorGrupoG.Integrador.controllers;
 
-import com.IntegradorGrupoG.Integrador.dao.ClienteDao;
+import com.IntegradorGrupoG.Integrador.Services.ClienteServicio;
 import com.IntegradorGrupoG.Integrador.models.Cliente;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -14,7 +12,7 @@ public class ClienteController  {
 //public class ClienteController implements ClienteDao {
 
     @Autowired
-    private ClienteDao unDao; //inyeccion de dependencias
+    private ClienteServicio unDao; //inyeccion de dependencias
 
     @RequestMapping(value = "api/cliente/{id}")
     public Cliente getCliente(@PathVariable int id){
@@ -37,7 +35,7 @@ public class ClienteController  {
 
     }
     @RequestMapping(value = "api/clientes", method = RequestMethod.POST)
-    public void agregarCliente(@RequestBody Cliente cliente){ //convierte lo que recibe en usuario
+    public void agregarCliente(@RequestBody Cliente cliente){ //convierte lo que recibe en Cliente
       unDao.agregarCliente(cliente);
 
     }

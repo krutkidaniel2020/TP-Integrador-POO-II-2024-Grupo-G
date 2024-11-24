@@ -1,11 +1,11 @@
-package com.IntegradorGrupoG.Integrador.Repository;
+package com.IntegradorGrupoG.Integrador.Services;
 
 import com.IntegradorGrupoG.Integrador.models.Categoria;
 
 
 import java.util.List;
 
-public interface CategoriaDao {
+public interface CategoriaServicio {
     List<Categoria> getCategorias();
 
 }

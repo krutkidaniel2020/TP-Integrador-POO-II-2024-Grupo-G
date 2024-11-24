@@ -1,5 +1,6 @@
 package com.IntegradorGrupoG.Integrador.Repository;
 
+import com.IntegradorGrupoG.Integrador.Services.ProductoServicio;
 import com.IntegradorGrupoG.Integrador.models.Producto;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
@@ -10,7 +11,7 @@ import java.util.List;
 
 @Repository
 @Transactional
-public class ProductoDaoImp implements ProductoDao{
+public class ProductoImp implements ProductoServicio {
     @PersistenceContext
     EntityManager entityManager2;
 
