@@ -1,30 +1,41 @@
 // Call the dataTables jQuery plugin
 $(document).ready(function() {
-cargarClientes();
-  $('#tablaClientes').DataTable();
+
+//alert(localStorage.token);
+cargarProductos();
+  $('#tablaProductos').DataTable();
 });
 
 
-async function cargarClientes(){
+async function cargarProductos(){
+    //if (localStorage.dni === null && localStorage.dni.length=== 0){
+    //window.location.href = 'login.html';
+    //};
 
-  const request = await fetch('api/clientes', {
+
+
+  const request = await fetch('api/productos', {
     method: 'GET',
     headers: getHeaders()
     //body: JSON.stringify({a: 1, b: 'Textual content'})
   });
-  const clientes = await request.json();
+  const productos = await request.json();
+  //if (productos.length === 0) {
+   //  alert("aa");
+
+  //}
 
   //console.log(clientes);
 let listadoHtml = '';
-for (let cli of clientes){
+for (let pro of productos){
 //let tel = cli.tel == null ? '-' : cli.tel;
 
-let btnElim ='<a href="#" onclick="eliminarCliente('+cli.id+')" class="btn btn-danger btn-circle btn-sm"><i class="fas fa-trash"></i>';
- let clienteHtml = '<tr><td>'+cli.dni+'</td><td>'+cli.apellido +' '+cli.nombre +'</td><td>'+cli.fecha +'</td><td>'+cli.direccion +'</td><td>'+cli.email +'</td><td>'+cli.tel +'</td><td>'+btnElim+'</a><a href="#" class="btn btn-warning btn-circle btn-sm"><i class="fas fa-exclamation-triangle"></i></a></tr>';
-listadoHtml += clienteHtml;
+let btnElim ='<a href="#" onclick="eliminarProducto('+pro.id+')" class="btn btn-danger btn-circle btn-sm"><i class="fas fa-trash"></i>';
+ let prodHtml = '<tr><td>'+pro.id+'</td><td></td><td>'+pro.nombre +'</td><td>'+pro.descripcion +'</td><td>'+pro.categoria +'</td><td>'+pro.cantidad +'</td><td>'+btnElim+'</a><a href="#" class="btn btn-warning btn-circle btn-sm"><i class="fas fa-exclamation-triangle"></i></a></tr>';
+listadoHtml += prodHtml;
 }
 
- document.querySelector('#tablaClientes tbody').outerHTML=listadoHtml;
+ document.querySelector('#tablaProductos tbody').outerHTML=listadoHtml;
 
 }
 
@@ -37,13 +48,13 @@ return {
 }
 
 
-async function eliminarCliente(id){
+async function eliminarProducto(id){
 
 
-if(!confirm('Desea eliminar el cliente '+id+'?')){
+if(!confirm('Desea eliminar el producto '+id+'?')){
 return;
 }
- const request = await fetch('api/clientes/'+id, {
+ const request = await fetch('api/productos/'+id, {
     method: 'DELETE',
     headers: getHeaders()
     //body: JSON.stringify({a: 1, b: 'Textual content'})

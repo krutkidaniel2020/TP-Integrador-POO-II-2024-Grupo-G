@@ -53,8 +53,8 @@ return;
       body: JSON.stringify(datosUser)
     });
     //const usuarios = await request1.json();
-    alert(1);
-    window.location.href = 'index.html';
+    alert("Registro exitoso!");
+    window.location.href = 'login.html';
 
 }
 

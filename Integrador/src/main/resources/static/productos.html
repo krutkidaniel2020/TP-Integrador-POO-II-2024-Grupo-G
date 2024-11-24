@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Clientes</title>
+    <title>Productos</title>
 
     <!-- Custom fonts for this template -->
     <link href="TEMPLATEVIEJO/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -51,23 +51,7 @@
                     <span>Principal</span></a>
             </li>
 
-            <!-- Divider -->
-            <hr class="sidebar-divider">
 
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Interface
-            </div>
-
-
-
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Addons
-            </div>
 
 
 
@@ -79,7 +63,24 @@
                     <i class="fas fa-fw fa-table"></i>
                     <span>Clientes</span></a>
             </li>
+            <!-- Nav Item - Tables -->
+            <li class="nav-item active">
+                <a class="nav-link" href="productos.html">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Productos</span></a>
+            </li>
 
+            <li class="nav-item active">
+                <a class="nav-link" href="login.html">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Login</span></a>
+            </li>
+
+            <li class="nav-item active">
+                <a class="nav-link" href="registrarCliente.html">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Registrar Cliente</span></a>
+            </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -189,26 +190,27 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Clientes</h1>
+                    <h1 class="h3 mb-2 text-gray-800">Productos</h1>
 
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Tabla Clientes</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Tabla Productos</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                                <table class="table table-bordered" id="tablaClientes" width="100%" cellspacing="0">
+                                <table class="table table-bordered" id="tablaProductos" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th>Dni</th>
-                                            <th>Apellido y Nombres</th>
+                                            <th>id</th>
+                                            <th>Marca</th>
+                                            <th>nombre</th>
 
-                                            <th>Fecha Nac</th>
-                                            <th>Direccion</th>
-                                            <th>Correo</th>
-                                            <th>Tel</th>
+                                            <th>Descripcion</th>
+                                            <th>Categoria</th>
+                                            <th>Cantidad Disp</th>
+
                                             <th>Acciones</th>
                                         </tr>
                                     </thead>
@@ -293,7 +295,7 @@
     <script src="TEMPLATEVIEJO/vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
     <!-- Page level custom scripts -->
-    <script src="js/clientes.js"></script>
+    <script src="js/productos2.js"></script>
 
 </body>
 

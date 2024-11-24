@@ -25,7 +25,7 @@ public class ClienteImp implements ClienteServicio {
     }
 
     @Override
-    public void elimunarCliente(int id) {
+    public void eliminarCliente(int id) {
         Cliente unCliente = entityManager1.find(Cliente.class,id);
         entityManager1.remove(unCliente);
     }

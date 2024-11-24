@@ -9,7 +9,7 @@ public interface ClienteServicio {
 List<Cliente> getClientes();
 
 
-    void elimunarCliente(int id);
+    void eliminarCliente(int id);
 
     void agregarCliente(Cliente cliente);
 }

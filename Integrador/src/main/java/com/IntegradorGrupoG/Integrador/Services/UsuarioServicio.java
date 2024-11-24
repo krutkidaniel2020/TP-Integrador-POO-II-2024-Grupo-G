@@ -9,4 +9,6 @@ public interface UsuarioServicio {
     List<Usuario> getUsuarios();
 
     void agregarUsuario(Usuario usuario);
+
+    Usuario obtenerUsuarioCredenciales(Usuario usuario);
 }
