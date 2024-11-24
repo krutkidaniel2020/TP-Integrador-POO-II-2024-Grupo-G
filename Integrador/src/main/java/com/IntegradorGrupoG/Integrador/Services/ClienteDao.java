@@ -1,4 +1,4 @@
-package com.IntegradorGrupoG.Integrador.dao;
+package com.IntegradorGrupoG.Integrador.Repository;
 
 import com.IntegradorGrupoG.Integrador.models.Cliente;
 

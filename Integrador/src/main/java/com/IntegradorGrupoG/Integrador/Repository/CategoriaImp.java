@@ -1,7 +1,6 @@
-package com.IntegradorGrupoG.Integrador.dao;
+package com.IntegradorGrupoG.Integrador.Repository;
 
-import com.IntegradorGrupoG.Integrador.models.Cliente;
-import com.IntegradorGrupoG.Integrador.models.Producto;
+import com.IntegradorGrupoG.Integrador.models.Categoria;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import org.springframework.stereotype.Repository;
@@ -11,17 +10,17 @@ import java.util.List;
 
 @Repository
 @Transactional
-public class ProductoDaoImp implements ProductoDao{
+public class CategoriaDaoImp implements CategoriaDao{
+
     @PersistenceContext
-    EntityManager entityManager2;
+    EntityManager entityManager1;
 
     @Override
-    public List<Producto> getProductos() {
+    public List<Categoria> getCategorias() {
         //String query = "FROM Cliente"; //Va el nombre de la Clase y no de la tabla bd aunque sean iguales
-        String query = "FROM Producto"; //Va el nombre de la Clase y no de la tabla bd aunque sean iguales
+        String query = "FROM Categoria"; //Va el nombre de la Clase y no de la tabla bd aunque sean iguales
         // return entityManager.createQuery(query).getResultList();
-        List<Producto> unaL = entityManager2.createQuery(query).getResultList();
+        List<Categoria> unaL = entityManager1.createQuery(query).getResultList();
         return unaL;
     }
-
 }

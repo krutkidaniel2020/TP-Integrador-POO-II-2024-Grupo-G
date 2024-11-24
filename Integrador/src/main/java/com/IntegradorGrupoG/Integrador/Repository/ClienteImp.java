@@ -1,4 +1,4 @@
-package com.IntegradorGrupoG.Integrador.dao;
+package com.IntegradorGrupoG.Integrador.Repository;
 
 import com.IntegradorGrupoG.Integrador.models.Cliente;
 import jakarta.persistence.EntityManager;
@@ -6,7 +6,6 @@ import jakarta.persistence.PersistenceContext;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
-import java.util.Locale;
 
 @Repository
 @Transactional
