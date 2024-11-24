@@ -6,19 +6,21 @@ import jakarta.persistence.PersistenceContext;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
+import java.util.Locale;
 
 @Repository
 @Transactional
 public class ClienteDaoImp implements ClienteDao{
 
     @PersistenceContext
-     EntityManager entityManager;
+     EntityManager entityManager1;
 
     @Override
     public List<Cliente> getClientes() {
+        //String query = "FROM Cliente"; //Va el nombre de la Clase y no de la tabla bd aunque sean iguales
         String query = "FROM Cliente"; //Va el nombre de la Clase y no de la tabla bd aunque sean iguales
-       //return entityManager.createNamedQuery(query).getResultList();
-        return entityManager.createQuery(query).getResultList();
-
+       // return entityManager.createQuery(query).getResultList();
+        List<Cliente> unaL = entityManager1.createQuery(query).getResultList();
+        return unaL;
     }
 }

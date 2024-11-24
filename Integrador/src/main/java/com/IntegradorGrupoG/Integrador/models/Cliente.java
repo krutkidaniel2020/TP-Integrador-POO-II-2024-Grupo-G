@@ -1,9 +1,6 @@
 package com.IntegradorGrupoG.Integrador.models;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 import java.util.Date;
 import java.util.Objects;
@@ -12,12 +9,12 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "cliente") //referencia a la tabla en mysql en este caso
-
 public class Cliente {
 
+    //@GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    @Column(name = "idCliente")
-    private int idCliente;
+    @Column(name = "id")
+    private int id;
 
     @Column(name = "dni")
     private String dni;
@@ -28,8 +25,8 @@ public class Cliente {
     @Column(name = "nombre")
     private String nombre;
 
-    @Column(name = "fechaNac")
-    private String fechaNac;
+    @Column(name = "fecha")
+    private String fecha;
 
     @Column(name = "direccion")
     private String direccion;
@@ -41,11 +38,11 @@ public class Cliente {
     private int tel;
 
     public int getIdCliente() {
-        return idCliente;
+        return id;
     }
 
     public void setIdCliente(int idCliente) {
-        this.idCliente = idCliente;
+        this.id = idCliente;
     }
 
     public String getDni() {
@@ -72,12 +69,12 @@ public class Cliente {
         this.nombre = nombre;
     }
 
-    public String getFechaNac() {
-        return fechaNac;
+    public String getFecha() {
+        return fecha;
     }
 
-    public void setFechaNac(String fechaNac) {
-        this.fechaNac = fechaNac;
+    public void setFecha(String fechaNac) {
+        this.fecha = fechaNac;
     }
 
     public String getDireccion() {
@@ -107,11 +104,11 @@ public class Cliente {
     @Override
     public String toString() {
         return "Cliente{" +
-                "idCliente=" + idCliente +
+                "idCliente=" + id +
                 ", dni='" + dni + '\'' +
                 ", apellido='" + apellido + '\'' +
                 ", nombre='" + nombre + '\'' +
-                ", fechaNac=" + fechaNac +
+                ", fechaNac=" + fecha +
                 ", direccion='" + direccion + '\'' +
                 ", email='" + email + '\'' +
                 ", tel=" + tel +
@@ -123,11 +120,11 @@ public class Cliente {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Cliente cliente = (Cliente) o;
-        return idCliente == cliente.idCliente && tel == cliente.tel && Objects.equals(dni, cliente.dni) && Objects.equals(apellido, cliente.apellido) && Objects.equals(nombre, cliente.nombre) && Objects.equals(fechaNac, cliente.fechaNac) && Objects.equals(direccion, cliente.direccion) && Objects.equals(email, cliente.email);
+        return id == cliente.id && tel == cliente.tel && Objects.equals(dni, cliente.dni) && Objects.equals(apellido, cliente.apellido) && Objects.equals(nombre, cliente.nombre) && Objects.equals(fecha, cliente.fecha) && Objects.equals(direccion, cliente.direccion) && Objects.equals(email, cliente.email);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(idCliente, dni, apellido, nombre, fechaNac, direccion, email, tel);
+        return Objects.hash(id, dni, apellido, nombre, fecha, direccion, email, tel);
     }
 }
