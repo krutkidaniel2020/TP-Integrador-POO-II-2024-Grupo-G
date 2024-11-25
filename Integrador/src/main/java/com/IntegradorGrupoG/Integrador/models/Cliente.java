@@ -1,106 +1,72 @@
 package com.IntegradorGrupoG.Integrador.models;
 
 import jakarta.persistence.*;
-
-import java.util.Date;
+import lombok.Getter;
+import lombok.Setter;
 import java.util.Objects;
-//import javax.persistence.Entity;
-//import javax.persistence.Table;
 
+
+/**
+ * Clase que representa al Cliente
+ */
 @Entity
 @Table(name = "cliente") //referencia a la tabla en mysql en este caso
 public class Cliente {
 
+    /**
+     * Variable id
+     */
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    @Column(name = "id")
+    @Column(name = "id") @Getter @Setter
     private int id;
 
-    @Column(name = "dni")
+    /**
+     * Variable dni
+     */
+    @Column(name = "dni") @Getter @Setter
     private String dni;
 
-    @Column(name = "apellido")
+    /**
+     * Variable apellido
+     */
+    @Column(name = "apellido") @Getter @Setter
     private String apellido;
 
-    @Column(name = "nombre")
+    /**
+     * Variable nombre
+     */
+    @Column(name = "nombre") @Getter @Setter
     private String nombre;
 
-    @Column(name = "fecha")
+    /**
+     * Variable fecha
+     */
+    @Column(name = "fecha") @Getter @Setter
     private String fecha;
 
-    @Column(name = "direccion")
+    /**
+     * Variable direccion
+     */
+    @Column(name = "direccion") @Getter @Setter
     private String direccion;
 
-    @Column(name = "email")
+    /**
+     * Variable email
+     */
+    @Column(name = "email") @Getter @Setter
     private String email;
 
-    @Column(name = "tel")
+    /**
+     * Variable tel
+     */
+    @Column(name = "tel") @Getter @Setter
     private int tel;
 
-    public int getIdCliente() {
-        return id;
-    }
-
-    public void setIdCliente(int idCliente) {
-        this.id = idCliente;
-    }
-
-    public String getDni() {
-        return dni;
-    }
-
-    public void setDni(String dni) {
-        this.dni = dni;
-    }
-
-    public String getApellido() {
-        return apellido;
-    }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getFecha() {
-        return fecha;
-    }
-
-    public void setFecha(String fechaNac) {
-        this.fecha = fechaNac;
-    }
-
-    public String getDireccion() {
-        return direccion;
-    }
-
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public int getTel() {
-        return tel;
-    }
-
-    public void setTel(int tel) {
-        this.tel = tel;
-    }
-
+    /**
+     * Funcion que devuelve los atributos del cliente en formato json
+     * @return atributos del cliente
+     */
     @Override
     public String toString() {
         return "Cliente{" +
@@ -115,6 +81,11 @@ public class Cliente {
                 '}';
     }
 
+    /**
+     * Funcion de buscar un objeto
+     * @param o el obj a buscar
+     * @return falso o el obj encontrado
+     */
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -123,6 +94,10 @@ public class Cliente {
         return id == cliente.id && tel == cliente.tel && Objects.equals(dni, cliente.dni) && Objects.equals(apellido, cliente.apellido) && Objects.equals(nombre, cliente.nombre) && Objects.equals(fecha, cliente.fecha) && Objects.equals(direccion, cliente.direccion) && Objects.equals(email, cliente.email);
     }
 
+    /**
+     * Metodo hash
+     * @return el obj por hash
+     */
     @Override
     public int hashCode() {
         return Objects.hash(id, dni, apellido, nombre, fecha, direccion, email, tel);

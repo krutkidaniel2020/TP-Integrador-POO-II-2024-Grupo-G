@@ -11,16 +11,24 @@ import java.util.List;
 
 @Repository
 @Transactional
+/**
+ * Clase que representa a la implementacion de categoria
+ */
 public class CategoriaImp implements CategoriaServicio {
 
+    /**
+     * Interfaz de persistencia
+     */
     @PersistenceContext
     EntityManager entityManager1;
 
+    /**
+     * Funcion que devuelve lista de categorias
+     * @return lista de categorias
+     */
     @Override
     public List<Categoria> getCategorias() {
-        //String query = "FROM Cliente"; //Va el nombre de la Clase y no de la tabla bd aunque sean iguales
         String query = "FROM Categoria"; //Va el nombre de la Clase y no de la tabla bd aunque sean iguales
-        // return entityManager.createQuery(query).getResultList();
         List<Categoria> unaL = entityManager1.createQuery(query).getResultList();
         return unaL;
     }

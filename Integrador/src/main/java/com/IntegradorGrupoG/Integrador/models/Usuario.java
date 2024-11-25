@@ -1,50 +1,42 @@
 package com.IntegradorGrupoG.Integrador.models;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
+/**
+ * Clase que representa al Usuario
+ */
 @Entity
 @Table(name = "usuario") //referencia a la tabla en mysql en este caso
 public class Usuario {
+
+    /**
+     * Variable id
+     */
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    @Column(name = "id")
+    @Column(name = "id")  @Getter @Setter
     int id;
-    @Column(name = "dni")
+
+    /**
+     * Variable dni
+     */
+    @Column(name = "dni") @Getter @Setter
     String dni;
-    @Column(name = "pass")
+
+    /**
+     * Variable pass
+     */
+    @Column(name = "pass") @Getter @Setter
     String pass;
-    @Column(name = "categoria")
+
+    /**
+     * Variable categoria
+     */
+    @Column(name = "categoria") @Getter @Setter
     String categoria;
 
-    public int getId() {
-        return id;
-    }
 
-    public void setId(int id) {
-        this.id = id;
-    }
 
-    public String getDni() {
-        return dni;
-    }
-
-    public void setDni(String dni) {
-        this.dni = dni;
-    }
-
-    public String getPass() {
-        return pass;
-    }
-
-    public void setPass(String pass) {
-        this.pass = pass;
-    }
-
-    public String getCategoria() {
-        return categoria;
-    }
-
-    public void setCategoria(String categoria) {
-        this.categoria = categoria;
-    }
 }

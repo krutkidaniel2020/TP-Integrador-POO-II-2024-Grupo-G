@@ -3,7 +3,6 @@ package com.IntegradorGrupoG.Integrador.controllers;
 
 import com.IntegradorGrupoG.Integrador.Services.ProductoServicio;
 
-import com.IntegradorGrupoG.Integrador.models.Cliente;
 import com.IntegradorGrupoG.Integrador.models.Producto;
 import com.IntegradorGrupoG.Integrador.utils.JWTUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,39 +16,42 @@ import java.util.List;
 @RestController
 public class ProductoController {
 
+    /**
+     * Variable unProdServ para la inyec de depend
+     */
     @Autowired
-    private ProductoServicio unDao; //inyeccion de dependencias
+    private ProductoServicio unProdServ; //inyeccion de dependencias
+
+    /**
+     * Variable jwutil para el user y token
+     */
     @Autowired
     private JWTUtil jwutil;
 
-   // @RequestMapping(value = "api/productos")
-  //  public List<Producto> getProductos(){
-    //    return unDao.getProductos();
-
-   // }
-
+    /**
+     * Funcion que devuelve la lista de productos
+     * @param token de seguridad
+     * @return lista de productos si esta logueado
+     */
     @RequestMapping(value = "api/productos")
     public List<Producto> getProductos(@RequestHeader(value="Authorization") String token){
         if (!validarToken(token)){return new ArrayList<>();}
 
-        return unDao.getProductos();
+        return unProdServ.getProductos();
     }
-    private boolean validarToken(String token){
-        // public List<Cliente> getClientes(){
-        //jwutil.getKey() devuelve el id
-        //jwutil.getValue() devuelve en este caso el dni asignado en AuthController
 
+    /**
+     * Funcion para validar el token
+     * @param token a buscar
+     * @return si es correcto o no
+     */
+    private boolean validarToken(String token){
         String prodId = jwutil.getKey(token);
         if(prodId==null){
-            //ArrayList aa = new ArrayList<>();
-            //aa.add("Sesion cerrada");
-            // return clienteId != null;
             return false;
-
         }else{
             return true;
         }
-
     }
 
 

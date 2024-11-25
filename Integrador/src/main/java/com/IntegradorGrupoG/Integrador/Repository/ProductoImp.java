@@ -9,12 +9,23 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
+/**
+ * Clase que representa a la implementacion de Producto
+ */
 @Repository
 @Transactional
 public class ProductoImp implements ProductoServicio {
+
+    /**
+     * Interfaz de persistencia
+     */
     @PersistenceContext
     EntityManager entityManager2;
 
+    /**
+     * Funcion que devuelve lista de productos
+     * @return lista de productos
+     */
     @Override
     public List<Producto> getProductos() {
         //String query = "FROM Cliente"; //Va el nombre de la Clase y no de la tabla bd aunque sean iguales

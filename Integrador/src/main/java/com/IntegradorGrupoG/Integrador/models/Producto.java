@@ -1,72 +1,61 @@
 package com.IntegradorGrupoG.Integrador.models;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
+/**
+ * Clase que representa a Producto
+ */
 @Entity
 @Table(name = "producto") //referencia a la tabla en mysql en este caso
 public class Producto {
+
+    /**
+     * Variable id
+     */
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    @Column(name = "id")
+    @Column(name = "id") @Getter @Setter
     int id;
-    @Column(name = "nombre")
+
+    /**
+     * Variable nombre
+     */
+    @Column(name = "nombre") @Getter @Setter
     String nombre;
-    @Column(name = "descripcion")
+
+    /**
+     * Variable marca
+     */
+    @Column(name = "marca") @Getter @Setter
+    String marca;
+
+    /**
+     * Variable descripcion
+     */
+    @Column(name = "descripcion") @Getter @Setter
     String descripcion;
-    @Column(name = "precio")
+
+    /**
+     * Variable precio
+     */
+    @Column(name = "precio") @Getter @Setter
     double precio;
-    @Column(name = "cantidad")
+
+    /**
+     * Variable cantidad
+     */
+    @Column(name = "cantidad") @Getter @Setter
     int cantidad;
-    @Column(name = "categoria")
+
+    /**
+     * Variable categoria
+     */
+    @Column(name = "categoria") @Getter @Setter
     int categoria;
 
 
 
-    public int getId() {
-        return id;
-    }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getDescripcion() {
-        return descripcion;
-    }
-
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
-    }
-
-    public double getPrecio() {
-        return precio;
-    }
-
-    public void setPrecio(double precio) {
-        this.precio = precio;
-    }
-
-    public int getCantidad() {
-        return cantidad;
-    }
-
-    public void setCantidad(int cantidad) {
-        this.cantidad = cantidad;
-    }
-
-    public int getCategoria() {
-        return categoria;
-    }
-
-    public void setCategoria(int categoria) {
-        this.categoria = categoria;
-    }
 }

@@ -1,34 +1,36 @@
 package com.IntegradorGrupoG.Integrador.models;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
+
+/**
+ * Clase que representa a Categoria
+ */
 @Entity
 @Table(name = "categoria")
 public class Categoria {
+
+    /**
+     * Variable id de la categ
+     */
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    @Column(name = "id")
+    @Column(name = "id")  @Getter @Setter
     private int id;
 
-    @Column(name = "nombre")
+    /**
+     * Variable nombre de la categ
+     */
+    @Column(name = "nombre") @Getter @Setter
     private String nombre;
 
-    public int getId() {
-        return id;
-    }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
+    /**
+     * Funcion que devuelve los atributos de la categoria
+     * @return un los atributos en formato json
+     */
     @Override
     public String toString() {
         return "Categoria{" +
