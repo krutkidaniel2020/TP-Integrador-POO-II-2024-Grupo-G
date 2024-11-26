@@ -338,6 +338,26 @@
 | **Para**     | El cliente recibe un mensaje de confirmación de registro |
 
 
+##  Wireframe
+![Wireframe Principal.png](Diagramas/Wireframe%20Principal.png)
+![Wireframe log.png](Diagramas%2FWireframe%20log.png)
+![Wireframe lista Prod.png](Diagramas%2FWireframe%20lista%20Prod.png)
 
 
 # Tareas
+- Se debe implementar
+Abm de productos, gestion de envios, gestion de pagos.
+- Respecto al poco tiempo para el desarrollo del trabajo, tuvimos que repartirnos las tareas.
+
+
+# Distribucion del trabajo
+- Dp-Iteracion 1 Schiaffino Thiago
+- Dp-Iteracion 2 Schiaffino Thiago
+- Diagrama uml - Krutki Daniel, Schiaffino Thiago
+- Erp - Krutki Daniel
+- Casos de usos - Krutki Daniel
+- Wireframe - Krutki Daniel
+- BD - Krutki Daniel
+- Diseño de software, Krutki Daniel
+- Doc javadoc - Krutki Daniel
+- Issues - Krutki Daniel

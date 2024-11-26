@@ -51,6 +51,8 @@ Registrar nuevos productos ecológicos.
 - Registrar nuevo usuario.
 - Editar usuario.
 
+
+
 #### 2.2. Requisitos funcionales
 - Usabilidad
 - Seguridad
@@ -70,6 +72,7 @@ Registrar nuevos productos ecológicos.
 ![Wireframe Principal.png](Diagramas/Wireframe%20Principal.png)
 ![Wireframe log.png](Diagramas%2FWireframe%20log.png)
 ![Wireframe lista Prod.png](Diagramas%2FWireframe%20lista%20Prod.png)
+
 ---
 
 
