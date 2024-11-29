@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * Controlador de autenticacion
  */
-@RestController
+@RestController //@Controller
 public class AuthController {
 
     /**
