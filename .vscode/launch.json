@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-IntegradorApplication<Integrador>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.IntegradorGrupoG.Integrador.IntegradorApplication",
+            "projectName": "Integrador",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

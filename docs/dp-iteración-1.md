@@ -1,8 +1,24 @@
 # Trabajo en equipo
+- Dp-Iteracion 1: Schiaffino Alejandro Thiago
+- Roadmap: Schiaffino Alejandro Thiago 
+- Diagrama uml: Krutki Daniel, Schiaffino Alejandro Thiago
+- Erp: Krutki Daniel
+- Casos de usos: Krutki Daniel
+- Wireframe: Krutki Daniel
+- BD: Krutki Daniel
+- Diseño de software: Krutki Daniel
+- Doc javadoc: Krutki Daniel
+- Issues: Krutki Daniel
 
+
+<br>
 
 
 # Diseño OO
+
+
+
+<br>
 
 
 
@@ -266,17 +282,12 @@
 
 
 
+<br>
+
+
+
 # Backlog de iteraciones
-| **ID**       | [HU001]                 |
-|--------------|-------------------------|
-| **Título**   | Realizar pedido         |
-| **Como**     | Cliente                 |
-| **Quiero**   | Seleccionar productos y realizar pedido |
-| **Para**     | El cliente recibe productos en su casa |
-
-
-
-| **ID**       | [HU002]                 |
+| **ID**       | [HU01]                 |
 |--------------|-------------------------|
 | **Título**   | Ver productos           |
 | **Como**     | Cliente                 |
@@ -285,7 +296,7 @@
 
 
 
-| **ID**       | [HU003]                 |
+| **ID**       | [HU02]                 |
 |--------------|-------------------------|
 | **Título**   | Realizar descuentos     |
 | **Como**     | Cliente                 |
@@ -294,70 +305,66 @@
 
 
 
-| **ID**       | [HU004]                 |
+| **ID**       | [HU03]                 |
 |--------------|-------------------------|
-| **Título**   | Seleccionar método de pago |
-| **Como**     | Cliente                 |
-| **Quiero**   | El cliente selecciona método de pago, tarjeta, efectivo |
-| **Para**     | El cliente realiza la operación de pago del pedido |
+| **Título**   | Registrar Categoria |
+| **Como**     | Usuario                 |
+| **Quiero**   | Registrar una nueva categoria de producto |
+| **Para**     | categorizar los productos del sistema |
 
 
 
-| **ID**       | [HU005]                 |
-|--------------|-------------------------|
-| **Título**   | Seleccionar método de envío |
-| **Como**     | Cliente                 |
-| **Quiero**   | El cliente selecciona método de envío local, provincial, nacional o retiro |
-| **Para**     | El cliente recibe el producto en su casa |
-
-
-
-| **ID**       | [HU006]                 |
+| **ID**       | [HU04]                 |
 |--------------|-------------------------|
 | **Título**   | Buscar productos por categoría |
 | **Como**     | Cliente                 |
-| **Quiero**   | El cliente selecciona una categoría de la lista desplegable categorías |
-| **Para**     | El cliente recibe la lista de productos de una categoría |
+| **Quiero**   | filtrar una lista de productos por su categoria |
+| **Para**     | facilitar la búsqueda de un producto |
 
 
 
-| **ID**       | [HU007]                 |
+| **ID**       | [HU05]                 |
 |--------------|-------------------------|
-| **Título**   | Registrar cliente       |
+| **Título**   | Gestion cliente       |
 | **Como**     | Cliente                 |
-| **Quiero**   | El cliente se registra al sistema |
-| **Para**     | El cliente recibe un mensaje de confirmación de registro |
+| **Quiero**   | Poder darme de alta, baja o modificar mi perfil en el sistema |
+| **Para**     | realizar pedidos |
 
 
 
-| **ID**       | [HU008]                 |
+| **ID**       | [HU06]                 |
 |--------------|-------------------------|
-| **Título**   | Registrar usuario       |
-| **Como**     | Cliente                 |
-| **Quiero**   | El cliente se registra al sistema como usuario |
-| **Para**     | El cliente recibe un mensaje de confirmación de registro |
+| **Título**   | Gestion usuario       |
+| **Como**     | Usuario                 |
+| **Quiero**   | Poder darme de alta, baja o modificar mi perfil en el sistema |
+| **Para**     | formar parte de la gestion del sistema |
+
+
+
+| **ID**       | [HU07]                 |
+|--------------|-------------------------|
+| **Título**   | Gestion producto       |
+| **Como**     | Usuario                 |
+| **Quiero**   | Registrar, eliminar o modificar productos |
+| **Para**     | poder gestionar los productos del sistema |
+
+
+<br>
 
 
 ##  Wireframe
 ![Wireframe Principal.png](Diagramas/Wireframe%20Principal.png)
 ![Wireframe log.png](Diagramas%2FWireframe%20log.png)
-![Wireframe lista Prod.png](Diagramas%2FWireframe%20lista%20Prod.png)
+![Wireframe lista Prod.png](Diagramas%2FWireframe%20lista%20Prod.png)  
+  
+
+<br>
 
 
 # Tareas
-- Se debe implementar
-Abm de productos, gestion de envios, gestion de pagos.
+- Se debe implementar abm de usuarios, abm de productos, abm de clientes, y gestion de categorias.
 - Respecto al poco tiempo para el desarrollo del trabajo, tuvimos que repartirnos las tareas.
 
 
-# Distribucion del trabajo
-- Dp-Iteracion 1 Schiaffino Thiago
-- Dp-Iteracion 2 Schiaffino Thiago
-- Diagrama uml - Krutki Daniel, Schiaffino Thiago
-- Erp - Krutki Daniel
-- Casos de usos - Krutki Daniel
-- Wireframe - Krutki Daniel
-- BD - Krutki Daniel
-- Diseño de software, Krutki Daniel
-- Doc javadoc - Krutki Daniel
-- Issues - Krutki Daniel
+
+
