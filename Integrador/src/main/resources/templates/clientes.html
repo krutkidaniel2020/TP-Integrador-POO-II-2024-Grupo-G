@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Clientes</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" />
+   <!-- <link rel="stylesheet" href="/templates/css/bootstrap.min.css" />-->
+</head>
+
+<body>
+    <div class="container-fluid">
+        <h3 class="display-3">Lista de clientes</h3>
+
+        <form th:action="@{/clientes/registroCliente}" th:method="get">
+            <button class="btn btn-primary">Agregar</button>
+        </form>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Dni</th>
+                    <th scope="col">Apellido</th>
+                    <th scope="col">Nombres</th>
+                    <th scope="col">Fecha Nac</th>
+                    <th scope="col">Direccion</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Tel</th>
+                    <th scope="col">Pass</th>
+                    <th scope="col">Operacion</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="cliente : ${clientes}">
+                    <td th:text="${cliente.dni}">Dni</td>
+                    <td th:text="${cliente.apellido}">Apellido</td>
+                    <td th:text="${cliente.nombres}">Nombres</td>
+                    <td th:text="${cliente.fecha}">Fecha Nac</td>
+                    <td th:text="${cliente.direccion}">Direccion</td>
+                    <td th:text="${cliente.email}">Email</td>
+                    <td th:text="${cliente.tel}">Tel</td>
+                    <td   ><label type="password" th:text="${cliente.pass}" ></label></td>
+                    <td th:text="${cliente.estado}">Estado</td>
+                    <td>
+                        <form th:action="@{/clientes/{id}/editar(id=${cliente.id})}" th:method="get">
+                            <button class="btn btn-success">Editar</button>
+                        </form>
+                    <!--</td>
+                    <td> -->
+                        <form th:action="@{/clientes/{id}(id=${cliente.id})}" th:method="delete">
+                            <button class="btn btn-danger">Baja</button>
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <ul class="list-group list-group-horizontal">
+            <li class="list-group-item"><a href="/">Inicio</a></li>
+        </ul>
+    </div>
+    <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+    <!--<script src="/templates/js/bootstrap.min.js"></script>-->
+</body>
+
+</html>

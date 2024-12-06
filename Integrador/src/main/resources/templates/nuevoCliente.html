@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Clientes</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" />
+</head>
+
+<body>
+    <div class="container-fluid">
+
+        <h3 class="display-3">Nuevo cliente</h3>
+
+        <form th:action="@{/clientes}" th:object="${cliente}" th:method="post">
+            <div class="row">
+                <div class="col mb-3">
+                    <label for="dni">Dni</label>
+                    <input type="text" class="form-control" id="dni" placeholder="Dni" value=""
+                        th:field="*{dni}" />
+                    <small th:if="${#fields.hasErrors('dni')}" th:errors="*{dni}">Error en dni</small>
+                </div>
+                <div class="col mb-3">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" class="form-control" id="apellido" placeholder="Apellido" value="" th:field="*{apellido}"/>
+                    <small th:if="${#fields.hasErrors('apellido')}" th:errors="*{apellido}">Error en apellido</small>
+                </div>
+
+                <div class="col mb-3">
+                    <label for="nombres">Nombres</label>
+                    <input type="text" class="form-control" id="nombres" placeholder="Nombres" value="" th:field="*{nombres}"/>
+                    <small th:if="${#fields.hasErrors('nombres')}" th:errors="*{nombres}">Error en nombres</small>
+                </div>
+
+                <div class="col mb-3">
+                    <label for="fecha">Fecha Nacimiento</label>
+                    <input type="text" class="form-control" id="fecha" placeholder="Fecha Nac" value="" th:field="*{fecha}"/>
+                    <small th:if="${#fields.hasErrors('fecha')}" th:errors="*{fecha}">Error en fecha nacimiento</small>
+                </div>
+
+                <div class="col mb-3">
+                    <label for="direccion">Direccion</label>
+                    <input type="text" class="form-control" id="direccion" placeholder="Direccion" value="" th:field="*{direccion}"/>
+                    <small th:if="${#fields.hasErrors('direccion')}" th:errors="*{direccion}">Error en direccion</small>
+                </div>
+
+                <div class="col mb-3">
+                    <label for="email">Email</label>
+                    <input type="text" class="form-control" id="email" placeholder="Email" value="" th:field="*{email}"/>
+                    <small th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Error en email</small>
+                </div>
+
+                <div class="col mb-3">
+                    <label for="tel">Tel</label>
+                    <input type="text" class="form-control" id="tel" placeholder="tel" value="" th:field="*{tel}"/>
+                    <small th:if="${#fields.hasErrors('tel')}" th:errors="*{tel}">Error en tel</small>
+                </div>
+                <div class="col mb-3">
+                    <label for="pass">Contraseña</label>
+                    <input type="text" class="form-control" id="pass" placeholder="pass" value="" th:field="*{pass}"/>
+                    <small th:if="${#fields.hasErrors('pass')}" th:errors="*{pass}">Error en pass</small>
+                </div>
+
+               <!-- <div class="col mb-3">
+                    <label for="estado">Estado</label>
+                    <input type="text" class="form-control" id="estado" placeholder="Estado" value="" th:field="*{estado}"/>
+                    <small th:if="${#fields.hasErrors('estado')}" th:errors="*{estado}">Error en estado</small>
+                </div>-->
+
+            </div>
+            <button class="btn btn-primary" type="submit">Guardar</button>
+        </form>
+        <p></p>
+        <ul class="list-group list-group-horizontal">
+            <li class="list-group-item"><a href="/clientes">Personas</a></li>
+            <li class="list-group-item"><a href="/">Inicio</a></li>
+        </ul>
+    </div>
+
+    <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

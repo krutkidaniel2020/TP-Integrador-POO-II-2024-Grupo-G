@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Productos</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" />
+</head>
+
+<body>
+    <div class="container-fluid">
+        <h3 class="display-3">Lista de productos</h3>
+
+        <form th:action="@{/productos/crear}" th:method="get">
+            <button class="btn btn-primary">Agregar</button>
+        </form>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Marca</th>
+                    <th scope="col">Descripcion</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Cantidad</th>
+                    <th scope="col">IdCateg</th>
+                    <th scope="col">Estado</th>
+                    <th scope="col">Operacion</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="producto : ${productos}">
+                    <td th:text="${producto.nombre}">Nombre</td>
+                    <td th:text="${producto.marca}">Marca</td>
+                    <td th:text="${producto.descripcion}">Descrip</td>
+                    <td th:text="${producto.precio}">Precio</td>
+                    <td th:text="${producto.cantidad}">Cantidad</td>
+                    <td th:text="${producto.categoria.nombre}">idCateg</td>
+
+                    <td th:text="${producto.estado}">Estado</td>
+                    <td>
+                        <form th:action="@{/productos/{id}/editar(id=${producto.id})}" th:method="get">
+                            <button class="btn btn-success">Editar</button>
+                        </form>
+                    <!--</td>
+                    <td> -->
+                        <form th:action="@{/productos/{id}(id=${producto.id})}" th:method="delete">
+                            <button class="btn btn-danger">Baja</button>
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <ul class="list-group list-group-horizontal">
+            <li class="list-group-item"><a href="/">Inicio</a></li>
+        </ul>
+    </div>
+    <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

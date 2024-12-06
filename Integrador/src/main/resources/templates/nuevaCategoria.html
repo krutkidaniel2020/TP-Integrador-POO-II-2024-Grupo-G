@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Categorias</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" />
+</head>
+
+<body>
+<div class="container-fluid">
+
+    <h3 class="display-3">Nueva categoria</h3>
+
+    <form th:action="@{/categorias}" th:object="${categoria}" th:method="post">
+        <div class="row">
+            <div class="col mb-3">
+                <label for="nombre">Nombre</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Nombre" value=""
+                       th:field="*{nombre}" />
+                <small th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}">Error en nombre</small>
+            </div>
+            <!--<div class="col mb-3">
+                <label for="apellidos">Apellidos</label>
+                <input type="text" class="form-control" id="apellidos" placeholder="Apellidos" value="" th:field="*{apellidos}"/>
+                <small th:if="${#fields.hasErrors('apellidos')}" th:errors="*{apellidos}">Error en apellidos</small>
+            </div>-->
+        </div>
+        <button class="btn btn-primary" type="submit">Guardar</button>
+    </form>
+    <p></p>
+    <ul class="list-group list-group-horizontal">
+        <li class="list-group-item"><a href="/categorias">Categorias</a></li>
+        <li class="list-group-item"><a href="/home">Inicio</a></li>
+    </ul>
+</div>
+
+<script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

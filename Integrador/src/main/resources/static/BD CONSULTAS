@@ -1,6 +1,8 @@
 Video min 4.18.20
 3.28.30 agregar encrip contrasenia usuario.
 
+postgres 42.7.4 vers
+
 Services tiene la logica de negocio
 Repositorio se encarga bd
 Controller maneja los empoints url uri
