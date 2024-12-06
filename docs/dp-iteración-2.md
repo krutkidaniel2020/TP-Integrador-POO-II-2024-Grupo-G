@@ -74,3 +74,48 @@
 - Ninguna.  
 
 --- 
+
+
+
+# Backlog de iteraciones
+| **ID**       | [HU01]                 |
+|--------------|-------------------------|
+| **Título**   | Metodo de envio           |
+| **Como**     | Cliente                 |
+| **Quiero**   | Seleccionar un metodo de envio |
+| **Para**     | el producto que deseo comprar |
+
+| **ID**       | [HU02]                 |
+|--------------|-------------------------|
+| **Título**   | Integración con metodos de pago           |
+| **Como**     | Cliente                 |
+| **Quiero**   | realizar pagos a través de plataformas en línea como PayPal o tarjetas de crédito |
+| **Para**     | facilitar las transacciones |
+
+| **ID**       | [HU03]                 |
+|--------------|-------------------------|
+| **Título**   | Hacer un pedido           |
+| **Como**     | Cliente                 |
+| **Quiero**   | Hacer un pedido |
+| **Para**     | un producto que deseo comprar |
+
+| **ID**       | [HU04]                 |
+|--------------|-------------------------|
+| **Título**   | Metodo de pago           |
+| **Como**     | Usuario                 |
+| **Quiero**   | Seleccionar un metodo de pago |
+| **Para**     | el producto que deseo comprar |
+
+| **ID**       | [HU05]                 |
+|--------------|-------------------------|
+| **Título**   | Reporte de ventas           |
+| **Como**     | Administrador                 |
+| **Quiero**   | generar reportes de ventas |
+| **Para**     | analizar el desempeño del negocio |
+
+| **ID**       | [HU06]                 |
+|--------------|-------------------------|
+| **Título**   | Gestión avanzada de usuarios           |
+| **Como**     | Administrador                 |
+| **Quiero**   | asignar roles a los usuarios |
+| **Para**     | definir sus permisos en el sistema |

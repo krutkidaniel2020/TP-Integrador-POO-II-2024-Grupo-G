@@ -6,10 +6,8 @@ Proyecto de software para la venta de productos ecológicos en línea, los produ
 * Cálculo de precios con descuentos 
 * Integración de múltiples métodos de pago.
 
-## Iteraciones
-El desarrollo del proyecto se dividirá en dos iteraciones principales.
 
-### Iteración 1
+## Iteración 1
 **Objetivo:** Implementar gestion de usuarios, clientes, categorias y productos.  
 
 Resumen de iteraciones:
@@ -84,27 +82,51 @@ Resumen de iteraciones:
 | **Quiero**   | Registrar, eliminar o modificar productos |
 | **Para**     | poder gestionar los productos del sistema |
 
-#### Resultados Esperados
-- Sistema con login y registro funcionales.
-- CRUD básico para la gestión de inventarios.
 
----
+## Iteración 2
+**Objetivo:** Implementar gestion de metodos de envios, metodo de pago, gestión de paquetes y pedidos.
 
-### Iteración 2 (Semana 3 a Semana 4)
-**Objetivo:** Expandir las funcionalidades y preparar el sistema para un entorno más robusto.
+| **ID**       | [HU01]                 |
+|--------------|-------------------------|
+| **Título**   | Metodo de envio           |
+| **Como**     | Cliente                 |
+| **Quiero**   | Seleccionar un metodo de envio |
+| **Para**     | el producto que deseo comprar |
 
-#### Historias de Usuario
-1. **Reporte de ventas**  
-   *Como administrador, quiero generar reportes de ventas para analizar el desempeño del negocio.*
-2. **Integración con métodos de pago**  
-   *Como usuario, quiero realizar pagos a través de plataformas en línea como PayPal o tarjetas de crédito para facilitar las transacciones.*
-3. **Gestión avanzada de usuarios**  
-   *Como administrador, quiero asignar roles a los usuarios para definir sus permisos en el sistema.*
+| **ID**       | [HU02]                 |
+|--------------|-------------------------|
+| **Título**   | Integración con metodos de pago           |
+| **Como**     | Cliente                 |
+| **Quiero**   | realizar pagos a través de plataformas en línea como PayPal o tarjetas de crédito |
+| **Para**     | facilitar las transacciones |
 
-#### Resultados Esperados
-- Sistema con reportes funcionales.
-- Métodos de pago integrados.
-- Roles de usuario configurables.
+| **ID**       | [HU03]                 |
+|--------------|-------------------------|
+| **Título**   | Hacer un pedido           |
+| **Como**     | Cliente                 |
+| **Quiero**   | Hacer un pedido |
+| **Para**     | un producto que deseo comprar |
+
+| **ID**       | [HU04]                 |
+|--------------|-------------------------|
+| **Título**   | Metodo de pago           |
+| **Como**     | Usuario                 |
+| **Quiero**   | Seleccionar un metodo de pago |
+| **Para**     | el producto que deseo comprar |
+
+| **ID**       | [HU05]                 |
+|--------------|-------------------------|
+| **Título**   | Reporte de ventas           |
+| **Como**     | Administrador                 |
+| **Quiero**   | generar reportes de ventas |
+| **Para**     | analizar el desempeño del negocio |
+
+| **ID**       | [HU06]                 |
+|--------------|-------------------------|
+| **Título**   | Gestión avanzada de usuarios           |
+| **Como**     | Administrador                 |
+| **Quiero**   | asignar roles a los usuarios |
+| **Para**     | definir sus permisos en el sistema |
 
 ---
 
